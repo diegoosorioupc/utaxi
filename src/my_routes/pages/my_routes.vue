@@ -1,6 +1,6 @@
 <template>
   <v-row align="center" class="px-3 mx-auto">
-    <v-col cols="12" md="4"><h1>My_routes</h1></v-col>
+    <v-col cols="12" md="4"><h1>My Routes</h1></v-col>
     <v-col cols="12" md="8">
       <v-spacer></v-spacer>
       <v-text-field v-model="title" append-icon="mdi-magnify"
@@ -95,10 +95,10 @@ export default {
     headers: [
       {text: 'Id',                 value: 'id',                 sortable: true, align: 'end'},
       {text: 'Title',              value: 'title',              sortable: true, align: 'start'},
-      {text: 'Date_Route',         value: 'date_route',         sortable: false},
-      {text: 'Place_Of_Departure', value: 'place_of_departure', sortable: false},
-      {text: 'Place_Of_Arrival',   value: 'place_of_arrival',   sortable: false},
-      {text: 'Price',              value: 'price',              sortable: false},
+      {text: 'Date Route',         value: 'date_route',         sortable: false},
+      {text: 'Place Of Departure', value: 'place_of_departure', sortable: false},
+      {text: 'Place Of Arrival',   value: 'place_of_arrival',   sortable: false},
+      {text: 'S/.',              value: 'price',              sortable: false},
       {text: 'Description',        value: 'description',        sortable: false},
       {text: 'Status',             value: 'status',             sortable: true},
       {text: 'Actions',            value: 'actions',            sortable: false},

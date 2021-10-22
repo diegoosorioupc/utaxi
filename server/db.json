@@ -1,24 +1,14 @@
 {
   "my_routes": [
     {
-      "title": "Departure from Punta Callao",
-      "date_route": "September 20, 2021",
-      "place_of_departure": "Callao",
-      "place_of_arrival": "UPC San Isidro",
-      "price": 5,
-      "description": "Route from Callao to UPC San Isidro",
-      "published": false,
-      "id": 1
-    },
-    {
-      "id": 3,
       "title": "Exit from Matellini Station",
       "date_route": "September 23, 2021",
       "place_of_departure": "Matellini",
       "place_of_arrival": "UPC Chorrillos",
       "price": 4,
       "description": "Route from Matellini to UPC Chorrillos",
-      "published": false
+      "published": true,
+      "id": 3
     },
     {
       "id": 4,

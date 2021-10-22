@@ -7,10 +7,10 @@
         <span>Get to class safely</span>
       </v-app-bar-title>
       <v-spacer></v-spacer>
-      <v-btn plain to="/homepage" color="black">Beginning</v-btn>
-      <v-btn plain to="/about" color="black">About Us</v-btn>
-      <v-btn plain to="/signup" color="black">Sign Up</v-btn>
-      <v-btn plain to="/login" color="black">Log In</v-btn>
+      <v-btn plain to="/home" color="black">Home</v-btn>
+      <v-btn plain to="/my_profile" color="black">My Profile</v-btn>
+      <v-btn plain to="/my_routes" color="black">My Routes</v-btn>
+      <v-btn plain to="/homepage" color="black">Sign Off</v-btn>
     </v-app-bar>
     <v-main>
       <v-container fluid>
