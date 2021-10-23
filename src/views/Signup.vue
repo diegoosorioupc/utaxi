@@ -14,21 +14,19 @@
         <v-row>
           <v-card class="mx-auto" height="500px" width="700px">
             <v-card-text>
-              <img alt="Vue logo" src="../../public/Logo_UTaxi.png" height="100px" align="center">
+              <v-row justify="center">
+                <img alt="Vue logo" src="../../public/Logo_UTaxi.png" height="100px" >
+              </v-row>
               <v-form
                   ref="form"
                   v-model="valid"
                   lazy-validation
               >
-                <v-checkbox
-                    v-model="checkbox1"
-                    :label="`Driver`"
-                ></v-checkbox>
+                <v-row justify="center">
+                  <v-checkbox v-model="checkbox1" :label="`Driver   |`"></v-checkbox>
 
-                <v-checkbox
-                    v-model="checkbox2"
-                    :label="`Student`"
-                ></v-checkbox>
+                  <v-checkbox v-model="checkbox2" :label="`Student`"></v-checkbox>
+                </v-row>
 
                 <v-text-field
                     v-model="user"
@@ -45,7 +43,9 @@
                     required
                 ></v-text-field>
 
-                <v-btn depressed color="primary" href='/toolbarhome'>Sign Up</v-btn>
+                <v-row justify="center">
+                  <v-btn depressed color="primary" href='/home'>Sign up</v-btn>
+                </v-row>
               </v-form>
             </v-card-text>
           </v-card>

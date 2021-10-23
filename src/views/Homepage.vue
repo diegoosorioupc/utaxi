@@ -4,7 +4,7 @@
       <v-img max-width="auto"
              src="../../public/Imagen02.jpg">
         <v-row>
-          <v-container>
+          <v-container justify="end">
             <v-card class="mx-auto" max-width="400">
               <v-img src="../../public/Timon.jpg" height="200px"></v-img>
               <v-card-title>Drive with us and generate profits</v-card-title>

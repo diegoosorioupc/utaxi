@@ -20,5 +20,20 @@
       "description": "Route from San Miguel to UPC San Miguel",
       "published": false
     }
+  ],
+  "my_datas": [
+    {
+      "id": 1,
+      "name": "Nelson Julio",
+      "lastname": "Gomez Diaz",
+      "email": "gomez.juan@hotmail.com",
+      "date_of_birth": "September 22, 1991",
+      "cellphone": 954745863,
+      "study_center": "UPC",
+      "university_id": "U201425748",
+      "license_number": 75846321,
+      "vehicle_model": "Kia Sportage 2019",
+      "license_plate": "2D4-7F8"
+    }
   ]
 }
