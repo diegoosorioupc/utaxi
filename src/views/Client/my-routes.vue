@@ -86,7 +86,7 @@
 </template>
 
 <script>
-import My_routesService from '../services/my_routes.service'
+import My_routesService from '../../my_routes/services/my_routes.service.js'
 export default {
   name: "my_routes",
   data: () => ({
@@ -95,10 +95,10 @@ export default {
     headers: [
       {text: 'Id',                 value: 'id',                 sortable: true, align: 'end'},
       {text: 'Title',              value: 'title',              sortable: true, align: 'start'},
-      {text: 'Date Route',         value: 'date_route',         sortable: false},
-      {text: 'Place Of Departure', value: 'place_of_departure', sortable: false},
-      {text: 'Place Of Arrival',   value: 'place_of_arrival',   sortable: false},
-      {text: 'S/.',              value: 'price',              sortable: false},
+      {text: 'Date_Route',         value: 'date_route',         sortable: false},
+      {text: 'Place_Of_Departure', value: 'place_of_departure', sortable: false},
+      {text: 'Place_Of_Arrival',   value: 'place_of_arrival',   sortable: false},
+      {text: 'Price',              value: 'price',              sortable: false},
       {text: 'Description',        value: 'description',        sortable: false},
       {text: 'Status',             value: 'status',             sortable: true},
       {text: 'Actions',            value: 'actions',            sortable: false},
@@ -146,12 +146,12 @@ export default {
 
     retrieveMy_routes() {
       My_routesService.getAll()
-      .then((response) => {
-        this.my_routes = response.data.map(this.getDisplayMy_route);
-      })
-      .catch(e => {
-        console.log(e);
-      });
+          .then((response) => {
+            this.my_routes = response.data.map(this.getDisplayMy_route);
+          })
+          .catch(e => {
+            console.log(e);
+          });
     },
 
     refreshList() {
@@ -179,8 +179,8 @@ export default {
       // TODO: Create or Update Item
       let item = this.editedItem;
       let dto = { title: item.title, date_route: item.date_route, place_of_departure: item.place_of_departure,
-                  place_of_arrival : item.place_of_arrival, price : item.price, description : item.description,
-                  published : item.status === 'Published'};
+        place_of_arrival : item.place_of_arrival, price : item.price, description : item.description,
+        published : item.status === 'Published'};
       if (this.editedIndex > -1) {
         dto.id = item.id;
         My_routesService.update(item.id, dto).then(() => this.refreshList()).catch(e => console.log(e));
@@ -190,12 +190,12 @@ export default {
 
     deleteMy_route(id) {
       My_routesService.delete(id)
-      .then(() => {
-        this.refreshList();
-      })
-      .catch(e => {
-        console.log(e);
-      });
+          .then(() => {
+            this.refreshList();
+          })
+          .catch(e => {
+            console.log(e);
+          });
     }
   },
 

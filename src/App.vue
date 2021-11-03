@@ -1,25 +1,9 @@
 <template>
   <v-app>
-    <v-app-bar app color="#f2f2f2 dark--text">
-      <v-app-bar-title>
-        <span class="black-text">UTaxi</span>
-        <v-divider inset vertical class="mx-1"></v-divider>
-        <span>Get to class safely</span>
-      </v-app-bar-title>
-      <v-spacer></v-spacer>
-      <v-btn plain to="/homepage" color="black">Beginning</v-btn>
-      <v-btn plain to="/about" color="black">About Us</v-btn>
-      <v-btn plain to="/signup" color="black">Sign Up</v-btn>
-      <v-btn plain to="/login" color="black">Log In</v-btn>
-    </v-app-bar>
-    <v-main>
-      <v-container fluid>
-        <router-view/>
-      </v-container>
-    </v-main>
+    <router-view></router-view>
   </v-app>
 </template>
 
-<style>
+<style scoped>
 
 </style>

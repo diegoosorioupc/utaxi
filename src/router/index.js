@@ -1,66 +1,63 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import FreeViews from '../views/FreeViews/Navegation.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/home',
-    name: 'Home',
-    component: Home
-  },
-  {
-    path: '/my_routes',
-    name: 'my_routes',
-    component: () => import('@/my_routes/pages/my_routes')
-  },
-  {
-    path: '/my_datas',
-    name: 'my_datas',
-    component: () => import('@/my_datas/pages/my_datas.vue')
-  },
-  {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  },
-  {
     path: '/',
-    alias: '/homepage',
-    name: 'Homepage',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import('../views/Homepage')
+    component: FreeViews,
+    children: [
+      {
+        path: '',
+        name: 'Home',
+        component: () => import('../views/FreeViews/Home.vue')
+      },
+      {
+        path: '/Home',
+        name: 'Home',
+        component: () => import('../views/FreeViews/Home.vue')
+      },
+      {
+        path: '/Login',
+        name: 'Login',
+        component: () => import('../views/FreeViews/Login.vue')
+      }
+    ]
+
   },
   {
-    path: '/signup',
-    name: 'Signup',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import('../views/Signup')
-  },
-  {
-    path: '/login',
-    name: 'Login',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import('../views/Login')
-  },
-  {
-    path: '/toolbarhome',
-    name: 'Toolbarhome',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import('../Toolbarhome')
-  },
+    path: '/Client',
+    component: () => import('../views/Client/Client.vue'),
+    children: [
+      {
+        path: '',
+        name: 'Home-Client',
+        component: () => import('../views/Client/Home.vue')
+      },
+      {
+        path:'',
+        name: 'Home-Client',
+        component: () => import('../views/Client/Home.vue')
+      },
+      {
+        path:'/profile',
+        name:'Profile',
+        component: () => import('../views/Client/Profile.vue')
+      },
+      {
+        path:'/my_routes',
+        name:'MyRoutes',
+        component: () => import('../views/Client/my-routes.vue')
+      },
+      {
+        path:"/about",
+        name:'About',
+        component: () => import('../views/Client/About.vue')
+      }
+    ]
+  }
 ]
 
 const router = new VueRouter({
